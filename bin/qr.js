@@ -2,6 +2,7 @@
 
 const meow = require('meow')
 const debug = require('debug')('quick-ref:overwrite')
+const nps = require('path')
 
 const transpiler = require('../src/transpiler')
 const overwrite = require('../src/overwrite')
@@ -62,6 +63,7 @@ loadConfig().then(result => {
   assertDocRoot(cli.flags.docRoot)
 
   cli.input.forEach(path => {
+    path = nps.resolve(path)
     debug('overwrite', cli.flags)
     let { linkAlias, imgAlias } = getCache(cli.flags.docRoot)
     let cLinkAlias = Object.assign({}, linkAlias)
@@ -69,7 +71,7 @@ loadConfig().then(result => {
 
     if (Object.keys(cLinkAlias).length === 0) {
       // maybe empty
-      calcAlias(path).then(({ linkAlias, imgAlias }) => {
+      calcAlias(cli.flags.docRoot).then(({ linkAlias, imgAlias }) => {
         overwrite(path, {
           linkAlias: linkAlias,
           imgAlias: imgAlias
