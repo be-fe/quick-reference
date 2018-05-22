@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`img-syntax should img-syntax normal 1`] = `
+Object {
+  "input": "@img:[\`fs\`]avalon#ssd@hahahah
+@img:avalon说说@hahahah
+@img:aval是sswzww@hahahah
+
+\`\`\`markdown
+@img:[\`fs\`]avalon#ssd@hahahah
+@img:avalon说说@hahahah
+@img:aval是sswzww@hahahah
+\`\`\`
+",
+  "output": "![\\\\\`fs\\\\\`](avalon.png#ssd)hahahah
+![avalon](avalon.png)hahahah
+@img:aval是sswzww@hahahah
+
+\`\`\`markdown
+@img:[\`fs\`]avalon#ssd@hahahah
+@img:avalon说说@hahahah
+@img:aval是sswzww@hahahah
+\`\`\`
+",
+}
+`;

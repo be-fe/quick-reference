@@ -1,0 +1,19 @@
+# Human friendly
+
+Node.js/
+  fs
+  module
+    index
+    perma-fssss
+
+团队项目/
+  cookbook
+    cookbook-version-1
+  release-scripts
+
+技术栈/
+  avalon
+    avalon监控属性的坑
+
+工具链/
+  docker

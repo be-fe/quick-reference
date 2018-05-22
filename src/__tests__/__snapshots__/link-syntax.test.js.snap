@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`link-syntax should link-syntax normal 1`] = `
+"[\`fs\`](avalon.md#ssd)hahahah
+[avalon](avalon.md)hahahah
+@link:aval是sswzww@hahahah
+
+\`\`\`markdown
+@link:[\`fs\`]avalon#ssd@hahahah
+@link:avalon说说@hahahah
+@link:aval是sswzww@hahahah
+\`\`\`
+"
+`;
