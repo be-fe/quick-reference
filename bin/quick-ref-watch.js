@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const meow = require('meow')
-const debug = require('debug')('quick-ref:watch')
+const debug = require('debug')('quick-reference:watch')
 
 const watch = require('../src/watch')
 const loadConfig = require('../src/loadConfig')

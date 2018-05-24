@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const meow = require('meow')
-const debug = require('debug')('quick-ref:overwrite')
+const debug = require('debug')('quick-reference:overwrite')
 const nps = require('path')
 
 const transpiler = require('../src/transpiler')

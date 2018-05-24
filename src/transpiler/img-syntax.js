@@ -7,7 +7,7 @@
 
 // const visit = require('unist-util-visit')
 const nps = require('path')
-const debug = require('debug')('quick-ref:img-syntax')
+const debug = require('debug')('quick-reference:img-syntax')
 
 const select = require('./select')
 

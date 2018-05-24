@@ -4,8 +4,8 @@
  * @date 2018/5/22
  * @description
  */
-const debug = require('debug')('quick-ref:loadConfig')
-const explorer = require('cosmiconfig')('quick-ref')
+const debug = require('debug')('quick-reference:loadConfig')
+const explorer = require('cosmiconfig')('quick-reference')
 const nps = require('path')
 
 module.exports = function (searchFrom) {

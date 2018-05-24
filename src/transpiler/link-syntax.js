@@ -7,7 +7,7 @@
 
 // const visit = require('unist-util-visit')
 const nps = require('path')
-const debug = require('debug')('quick-ref:link-syntax')
+const debug = require('debug')('quick-reference:link-syntax')
 const select = require('./select')
 
 const PREFIX = '@link:'

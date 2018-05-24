@@ -10,7 +10,7 @@ const md5 = require('md5')
 const fs = require('fs')
 // const readdirp = require('recursive-readdir')
 const cache = require('node-shared-cache')
-const debug = require('debug')('quick-ref:util')
+const debug = require('debug')('quick-reference:util')
 
 function isMd(file) {
   let ext = nps.extname(file).toLowerCase()

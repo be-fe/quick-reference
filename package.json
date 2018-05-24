@@ -1,9 +1,10 @@
 {
-  "name": "quick-ref",
+  "name": "quick-reference",
   "version": "1.0.0",
   "scripts": {
     "test": "jest"
   },
+  "files": ["bin", "src"],
   "preferGlobal": true,
   "dependencies": {
     "chokidar": "^2.0.3",
@@ -39,7 +40,7 @@
   "engines": {
     "node": ">=6"
   },
-  "quick-ref": {
+  "quick-reference": {
     "docRoot": "testdocs"
   }
 }

@@ -6,7 +6,7 @@
  */
 
 // 监控md或者图片资源文件，保持图片资源和md文件的permalink
-const debug = require('debug')('quick-ref:watch')
+const debug = require('debug')('quick-reference:watch')
 const chokidar = require('chokidar')
 const nps = require('path')
 const fs = require('fs')
