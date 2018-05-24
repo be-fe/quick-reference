@@ -31,8 +31,12 @@ function isImg(file) {
 function releaseCache(docRoot) {
   docRoot = nps.resolve(docRoot)
   let id = md5(docRoot).slice(0, 8)
+  try {
   cache.release(id + '-link')
   cache.release(id + '-img')
+  } catch (e) {
+    debug('Error occurs when cache release', e, id)
+  }
 }
 
 function getCache(docRoot) {

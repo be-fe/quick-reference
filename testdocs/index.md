@@ -23,8 +23,8 @@ sdsds
 | ------- | ---- | ---- |
 | aawWawd | Www  | sss  |
 
-* ssdds**R**
-* ss*d*s `是的是的是R`
+- ssdds**R**
+- ss_d_s `是的是的是R`
 
 > sdsds
 > www

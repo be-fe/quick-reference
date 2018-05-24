@@ -108,6 +108,10 @@ quick-ref-watch -o
 quick-ref <...md files>
 ```
 
+## 怎么工作的？
+
+[戳这里](./Principle.md)
+
 ## 推荐的使用姿势
 
 在开启了 `quick-ref-watch` 服务（不开启`-o`）后，在 IDE 中配置 `quick-ref` 进行 markdown 转换。
@@ -137,3 +141,6 @@ quick-ref <...md files>
 ![](https://i.loli.net/2018/05/24/5b064614d75d2.png)
 
 ![](https://i.loli.net/2018/05/24/5b06464ec7909.png)
+
+
+

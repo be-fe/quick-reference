@@ -4,6 +4,7 @@ const meow = require('meow')
 const debug = require('debug')('quick-reference:watch')
 
 const watch = require('../src/watch')
+const { releaseCache } = require('../src/util')
 const loadConfig = require('../src/loadConfig')
 
 const cli = meow(
@@ -56,3 +57,8 @@ if (!cli.input[0]) {
 else {
   watch(cli.input[0], cli.flags)
 }
+
+process.on('SIGINT', () => {
+  // releaseCache(cli.input[0])
+  process.exit()
+})
