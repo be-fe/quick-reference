@@ -7,8 +7,8 @@
 
 // const visit = require('unist-util-visit')
 const nps = require('path')
-const leven = require('leven')
 const debug = require('debug')('quick-ref:link-syntax')
+const select = require('./select')
 
 const PREFIX = '@link:'
 const SUFFIX = '@'
@@ -83,34 +83,30 @@ function link({ alias = {}, filename } = {}) {
         permalink = permalink.substring(0, hashIndex)
       }
 
-      let minDist = Number.MAX_SAFE_INTEGER
       let linkedFilename = alias[permalink]
       let matchedPermaLink = permalink
-
       let sameList = []
-
       if (!linkedFilename) {
-        // 寻找最相近的
-        for (let perma in alias) {
-          let t = leven(perma, permalink)
-          // 编辑距离大于等于 perma 长度，认为匹配失败
-          if (perma.length <= t) {
-            continue
-          }
-
-          if (t < minDist) {
-            minDist = t
-            matchedPermaLink = perma
-            linkedFilename = alias[matchedPermaLink]
-            sameList.push(nps.relative(process.cwd(), linkedFilename))
-          } else if (t === minDist) {
-            sameList.push(nps.relative(process.cwd(), alias[perma]))
-          }
+        let data = select(
+          alias,
+          permalink,
+          sameList
+        )
+        if (data) {
+          linkedFilename = data.linkedFilename
+          matchedPermaLink = data.matchedPermaLink
         }
       }
 
       if (sameList.length > 1) {
-        messages.push(['多个同可能匹配的文档集: ' + JSON.stringify(permalink) + ' [' + sameList.join(', ') + ']', now])
+        messages.push([
+          '多个同可能匹配的文档集: ' +
+            JSON.stringify(permalink) +
+            ' [' +
+            sameList.join(', ') +
+            ']',
+          now
+        ])
         return
       }
 
@@ -121,8 +117,7 @@ function link({ alias = {}, filename } = {}) {
           url: nps.relative(nps.dirname(filename), linkedFilename) + hash,
           children: this.tokenizeInline(title || matchedPermaLink, now)
         })
-      }
-      else {
+      } else {
         messages.push(['匹配失败: ' + JSON.stringify(permalink), now])
       }
     }

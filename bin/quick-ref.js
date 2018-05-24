@@ -70,6 +70,7 @@ loadConfig().then(result => {
     let cImgAlias = Object.assign({}, imgAlias)
 
     if (Object.keys(cLinkAlias).length === 0) {
+      debug('shared cache not found')
       // maybe empty
       calcAlias(cli.flags.docRoot).then(({ linkAlias, imgAlias }) => {
         overwrite(path, {
@@ -79,6 +80,7 @@ loadConfig().then(result => {
       })
     }
     else {
+      debug('shared cache is found!')
       overwrite(path, {
         linkAlias: cLinkAlias,
         imgAlias: cImgAlias

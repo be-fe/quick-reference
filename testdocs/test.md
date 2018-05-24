@@ -1,11 +1,14 @@
-* * *
-
+---
 title: "Node.js Fs"
+---
 
-## permalink: tessss
+```markdown
+@img:[edam pic]Eda@
+@link:avalon@other text
+```
 
-Nodejs fs 模块是个好东西
+[docker](工具链/docker/docker.md#anchor)
+![edam pic](imgs/Edam.png)
+[avalon](技术栈/avalon.md)other text
 
-[`fs`](技术栈/avalon.md#ssd)hahahah
-@link:avalon@hahahah
-@link:aval是sswzww@hahahah
+@link:aval是sswzww@not found

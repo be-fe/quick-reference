@@ -22,4 +22,22 @@ describe('link-syntax', function() {
       .then(({ output }) => expect(output).toMatchSnapshot())
       .then(done)
   })
+
+  it('should do not modified other text', function() {
+    console.dir(
+      JSON.stringify(
+        compile.parse(
+          nps.join(__dirname, '../../testdocs/test.md'),
+          {
+            linkAlias: {
+              avalon: nps.join(__dirname, 'fixture/avalon.md')
+            }
+          },
+          ['link']
+        ),
+        null,
+        4
+      )
+    )
+  })
 })

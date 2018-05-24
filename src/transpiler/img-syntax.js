@@ -7,8 +7,9 @@
 
 // const visit = require('unist-util-visit')
 const nps = require('path')
-const leven = require('leven')
 const debug = require('debug')('quick-ref:img-syntax')
+
+const select = require('./select')
 
 const PREFIX = '@img:'
 const SUFFIX = '@'
@@ -85,29 +86,18 @@ function img({ alias = {}, filename } = {}) {
       }
 
 
-      let minDist = Number.MAX_SAFE_INTEGER
       let linkedFilename = alias[permalink]
       let matchedPermaLink = permalink
-
       let sameList = []
-
       if (!linkedFilename) {
-        // 寻找最相近的
-        for (let perma in alias) {
-          let t = leven(perma, permalink)
-          // 编辑距离大于等于 perma 长度，认为匹配失败
-          if (perma.length <= t) {
-            continue
-          }
-
-          if (t < minDist) {
-            minDist = t
-            matchedPermaLink = perma
-            linkedFilename = alias[matchedPermaLink]
-            sameList.push(nps.relative(process.cwd(), linkedFilename))
-          } else if (t === minDist) {
-            sameList.push(nps.relative(process.cwd(), alias[perma]))
-          }
+        let data = select(
+          alias,
+          permalink,
+          sameList
+        )
+        if (data) {
+          linkedFilename = data.linkedFilename
+          matchedPermaLink = data.matchedPermaLink
         }
       }
 
