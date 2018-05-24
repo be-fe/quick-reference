@@ -1,4 +1,5 @@
 # quick-reference
+
 [![build status](https://img.shields.io/travis/be-fe/quick-reference/master.svg?style=flat-square)](https://travis-ci.org/be-fe/quick-reference)
 [![Test coverage](https://img.shields.io/codecov/c/github/be-fe/quick-reference.svg?style=flat-square)](https://codecov.io/github/be-fe/quick-reference?branch=master)
 [![NPM version](https://img.shields.io/npm/v/quick-reference.svg?style=flat-square)](https://www.npmjs.com/package/quick-reference)
@@ -80,7 +81,7 @@ permalink: hssss
     @img:premalink@
     @img:[title]premalink@
 
-会自动转换成对应 permalink 的资源，link转换为`[...](...)`，img转换为`![](...)`
+会自动转换成对应 permalink 的资源，link 转换为`[...](...)`，img 转换为`![](...)`
 
 效果如图展示：
 
@@ -90,6 +91,8 @@ permalink: hssss
 
     npm install quick-reference -g
 
+安装后，新增了 2 个命令 `quick-ref-watch` 和 `quick-ref`.
+
 安装后，在项目的 package.json 中配置 (使用[cosmiconfig](https://github.com/davidtheclark/cosmiconfig))
 
     "quick-reference": {
@@ -98,33 +101,33 @@ permalink: hssss
 
 ```bash
 # 开启文件监听服务，`-o` 表示覆写改动的文件，默认不开启
-quick-reference-watch -o
+quick-ref-watch -o
 
 # 同时可以不使用文件监听进程`-o`标志
-# 使用 quick-reference进行转换亦可
-quick-reference <...md files>
+# 使用 quick-ref 进行转换亦可
+quick-ref <...md files>
 ```
 
 ## 推荐的使用姿势
 
-在开启了 `quick-reference-watch` 服务（不开启`-o`）后，在 IDE 中配置 `quick-reference` 进行 markdown 转换。
+在开启了 `quick-ref-watch` 服务（不开启`-o`）后，在 IDE 中配置 `quick-ref` 进行 markdown 转换。
 
-下面介绍在不同 IDE 中 `quick-reference` 的使用方式。
+下面介绍在不同 IDE 中 `quick-ref` 的使用方式。
 
 ### WebStorm JetBrain
 
 #### 方式一 (External Tools，快捷键触发)
 
-- Preferences - External Tools
+* Preferences - External Tools
   ![](https://i.loli.net/2018/05/24/5b06446b5a143.png)
 
-- New Tool
+* New Tool
   ![](https://i.loli.net/2018/05/24/5b06450c50b61.png)
 
-- Enable `quick-reference`, and apply the setting.
+* Enable `quick-reference`, and apply the setting.
   ![](https://i.loli.net/2018/05/24/5b06453786505.png)
 
-- Set Keymap for run `quick-reference`
+* Set Keymap for run `quick-reference`
   ![](https://i.loli.net/2018/05/24/5b0645aac42c1.png)
 
 #### 方法二（File Watcher，监控文件修改自动执行）
