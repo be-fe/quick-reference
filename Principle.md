@@ -1,4 +1,4 @@
-阅读本文需要读者已经知道 [quick-reference](./Readme.md)。
+阅读本文需要读者已经知道 [quick-reference](./)。
 
 本文主要剖析实现 quick-reference 的一些技术点
 
@@ -54,6 +54,6 @@ socket 方式被 unix 平台 mysql 使用
 
 更多内容不具体展开讨论了，对 Linux 有兴趣的同学自己研究。
 
-对于 nodejs 中的 IPC，我简单写了[几个栗子](./ipc)
+对于 node.js 中的 IPC，我简单写了[几个栗子](./ipc)
 
 在这里我是用的[共享内存](https://github.com/kyriosli/node-shared-cache)（即同一块物理内存），在系统关机后，共享内存中的数据将会被清空。
