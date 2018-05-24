@@ -4,7 +4,10 @@
   "scripts": {
     "test": "jest"
   },
-  "files": ["bin", "src"],
+  "files": [
+    "bin",
+    "src"
+  ],
   "preferGlobal": true,
   "dependencies": {
     "chokidar": "^2.0.3",
@@ -42,5 +45,18 @@
   },
   "quick-reference": {
     "docRoot": "testdocs"
-  }
+  },
+  "description": "[![build status](https://img.shields.io/travis/be-fe/quick-reference/master.svg?style=flat-square)](https://travis-ci.org/be-fe/quick-reference) [![Test coverage](https://img.shields.io/codecov/c/github/be-fe/quick-reference.svg?style=flat-square)](https://codecov.io/github/be-fe/quick-reference?branch=master) [![NPM version](https://img.shields.io/npm/v/quick-reference.svg?style=flat-square)](https://www.npmjs.com/package/quick-reference) [![NPM Downloads](https://img.shields.io/npm/dm/quick-reference.svg?style=flat-square&maxAge=43200)](https://www.npmjs.com/package/quick-reference)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/be-fe/quick-reference.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/be-fe/quick-reference/issues"
+  },
+  "homepage": "https://github.com/be-fe/quick-reference#readme"
 }
