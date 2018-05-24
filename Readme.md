@@ -1,5 +1,4 @@
 # quick-reference
-
 [![build status](https://img.shields.io/travis/be-fe/quick-reference/master.svg?style=flat-square)](https://travis-ci.org/be-fe/quick-reference)
 [![Test coverage](https://img.shields.io/codecov/c/github/be-fe/quick-reference.svg?style=flat-square)](https://codecov.io/github/be-fe/quick-reference?branch=master)
 [![NPM version](https://img.shields.io/npm/v/quick-reference.svg?style=flat-square)](https://www.npmjs.com/package/quick-reference)
