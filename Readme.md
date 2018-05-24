@@ -76,16 +76,15 @@ permalink: hssss
 
 有了上面的扁平文件的概念之后，通过下面的语法
 
-````
-@link:premalink@  
-@link:[title]premalink@
-@img:premalink@
-@img:[title]premalink@
-````
+    @link:premalink@  
+    @link:[title]premalink@
+    @img:premalink@
+    @img:[title]premalink@
 
 会自动转换成对应 permalink 的资源，link转换为`[...](...)`，img转换为`![](...)`
 
 效果如图展示：
+
 ![](./snapshot.gif)
 
 ## 使用
@@ -117,16 +116,16 @@ quick-ref <...md files>
 
 #### 方式一 (External Tools，快捷键触发)
 
-* Preferences - External Tools
+- Preferences - External Tools
   ![](https://i.loli.net/2018/05/24/5b06446b5a143.png)
 
-* New Tool
+- New Tool
   ![](https://i.loli.net/2018/05/24/5b06450c50b61.png)
 
-* Enable `quick-ref`, and apply the setting.
+- Enable `quick-ref`, and apply the setting.
   ![](https://i.loli.net/2018/05/24/5b06453786505.png)
 
-* Set Keymap for run `quick-ref`
+- Set Keymap for run `quick-ref`
   ![](https://i.loli.net/2018/05/24/5b0645aac42c1.png)
 
 #### 方法二（File Watcher，监控文件修改自动执行）
