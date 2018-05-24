@@ -1,4 +1,4 @@
-阅读本文需要读者已经知道 [quick-reference](./)。
+阅读本文需要读者已经知道 [quick-reference](./Readme.md)。
 
 本文主要剖析实现 quick-reference 的一些技术点
 
