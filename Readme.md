@@ -126,7 +126,7 @@ quick-ref <...md files>
   ![](https://i.loli.net/2018/05/24/5b06446b5a143.png)
 
 * New Tool
-  ![](https://i.loli.net/2018/05/24/5b06450c50b61.png)
+  ![](https://i.loli.net/2018/06/08/5b1a2de85b74b.png)
 
 * Enable `quick-reference`, and apply the setting.
   ![](https://i.loli.net/2018/05/24/5b06453786505.png)
